@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.back-button{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 5;
+  padding: 10px 20px;
+  background-color: F0F8FF; /* Example blue background */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Initial shadow for 3D effect */
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.btn-primary{
+ position: relative;
+ top: 0;
+}
+
+.fa-arrow-left{
+  color: #007bff;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.checkbox {
+    display: none;
+  }
+  
+  
+  
+  .lang {
+    color: #dbd3d3;
+    font-size: 12px;
+    z-index: 2;
+    padding: 5px;;
+  }
+  
+  
+  .language-switcher {
+    position: fixed; /* Fixed positioning to keep it in view */
+    top: 50px; /* Distance from the top of the viewport */
+    right: 3dvb; /* Distance from the right of the viewport */
+    z-index: 40; /* Ensures it stays on top of other content */
+  }
+  
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    background-color: #4452eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 50px;
+    position: relative;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+  }
+  
+  .label .fas {
+    color: white;
+    z-index: 2;
+  }
+  
+  .ball {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s linear;
+    z-index: 3;
+  }
+  
+  .checkbox:checked + .label .ball {
+    transform: translateX(38px);
+  }
+  
+  header {
+    color: #4452eb;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.news-item {
+    background: #E6F7FF;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(25, 100, 150, 0.5); /* Bluish shadow */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(25, 100, 150, 0.7);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.news-item h2 {
+    font-size: 18px;
+    color: #0056b3;
+    margin: 10px 0;
+}
+.news-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+.news-meta span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.news-summary {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6;
+    padding: 0 5px;
+}
+  
+  

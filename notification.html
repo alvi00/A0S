@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="logoimg.png" />
+    <title>Bodlao</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="notification.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  </head>
+  <body>
+    <div class="back-button">
+      <a id="back-icon" href="#" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+    </div>
+
+    <div class="language-switcher">
+      <input type="checkbox" id="lang-toggle" class="checkbox" />
+      <label for="lang-toggle" class="label">
+        <span class="lang lang-left">Ban</span>
+        <div class="ball"></div>
+        <span class="lang lang-right">Eng</span>
+      </label>
+    </div>
+
+    <div class="notification-panel">
+      <div class="header">
+        <h1 class="lang-text"  data-lang-en="Notifications" data-lang-bn= "বিজ্ঞপ্তি"><i class="fas fa-bell"></i> Notifications</h1>
+      </div>
+    </div>
+    <h2 class="date-header lang-text" data-lang-en="Today" data-lang-bn="আজ">
+        Today
+    </h2>
+    <div class="notification-container">
+      <!-- Individual notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="Equal Opportunities"
+            data-lang-bn="সমান সুযোগ"
+          >
+            Equal Opportunities
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Achieving gender equality means providing equal representation in political, economic, and public life. This ensures that decisions reflect the needs and aspirations of all segments of society, leading to more equitable and effective governance. Every step toward equal representation is a step toward fairness and justice in society."
+            data-lang-bn="লিঙ্গ সাম্য অর্জন করা মানে রাজনৈতিক, অর্থনৈতিক এবং জনজীবনে সমান প্রতিনিধিত্ব প্রদান করা। এটি নিশ্চিত করে যে সিদ্ধান্তগুলি সমাজের সব অংশের চাহিদা ও আকাঙ্খাগুলি প্রতিফলিত করে, যা আরও ন্যায়সঙ্গত ও কার্যকর শাসন প্রদান করে। সমান প্রতিনিধিত্বের প্রতি পদক্ষেপ সমাজে ন্যায় ও বিচারের দিকে একটি পদক্ষেপ।"
+          >
+            Achieving gender equality means providing equal representation in
+            political, economic, and public life. This ensures that decisions
+            reflect the needs and aspirations of all segments of society,
+            leading to more equitable and effective governance. Every step
+            toward equal representation is a step toward fairness and justice in
+            society.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class="lang-text"
+            data-lang-en="Achieving gender equality means providing equal representation in political, economic, and public life. This ensures that decisions reflect the needs and aspirations of all segments of society, leading to more equitable and effective governance. Every step toward equal representation is a step toward fairness and justice in society."
+            data-lang-bn="লিঙ্গ সাম্য অর্জন করা মানে রাজনৈতিক, অর্থনৈতিক এবং জনজীবনে সমান প্রতিনিধিত্ব প্রদান করা। এটি নিশ্চিত করে যে সিদ্ধান্তগুলি সমাজের সব অংশের চাহিদা ও আকাঙ্খাগুলি প্রতিফলিত করে, যা আরও ন্যায়সঙ্গত ও কার্যকর শাসন প্রদান করে। সমান প্রতিনিধিত্বের প্রতি পদক্ষেপ সমাজে ন্যায় ও বিচারের দিকে একটি পদক্ষেপ।"
+          >
+            Achieving gender equality means providing equal representation in
+            political, economic, and public life. This ensures that decisions
+            reflect the needs and aspirations of all segments of society,
+            leading to more equitable and effective governance. Every step
+            toward equal representation is a step toward fairness and justice in
+            society.
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="Gender Equality in Workplace"
+            data-lang-bn="কর্মস্থলে লিঙ্গ সাম্য"
+          >
+            Gender Equality in Workplace
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Diverse perspectives drive innovation. When workplaces are gender-balanced, they benefit from a broader range of ideas and experiences, leading to better decision-making and more creative solutions. Promoting gender equality in every industry is crucial for fostering an environment where innovation thrives."
+            data-lang-bn="বৈচিত্র্যময় দৃষ্টিভঙ্গি উদ্ভাবন চালিত করে। যখন কর্মস্থলগুলি লিঙ্গ-ভারসাম্যপূর্ণ হয়, তখন তারা আরও বিস্তৃত ধারণা ও অভিজ্ঞতার সুবিধা পায়, যা উন্নত সিদ্ধান্ত গ্রহণ এবং আরও সৃজনশীল সমাধানের দিকে নিয়ে যায়। প্রতিটি শিল্পে লিঙ্গ সাম্য উন্নয়নের প্রচার উদ্ভাবনের পরিবেশ গড়ে তোলার জন্য অপরিহার্য।"
+          >
+            Diverse perspectives drive innovation. When workplaces are
+            gender-balanced, they benefit from a broader range of ideas and
+            experiences, leading to better decision-making and more creative
+            solutions. Promoting gender equality in every industry is crucial
+            for fostering an environment where innovation thrives.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class="lang-text"
+            data-lang-en="Diverse perspectives drive innovation. When workplaces are gender-balanced, they benefit from a broader range of ideas and experiences, leading to better decision-making and more creative solutions. Promoting gender equality in every industry is crucial for fostering an environment where innovation thrives."
+            data-lang-bn="বৈচিত্র্যময় দৃষ্টিভঙ্গি উদ্ভাবন চালিত করে। যখন কর্মস্থলগুলি লিঙ্গ-ভারসাম্যপূর্ণ হয়, তখন তারা আরও বিস্তৃত ধারণা ও অভিজ্ঞতার সুবিধা পায়, যা উন্নত সিদ্ধান্ত গ্রহণ এবং আরও সৃজনশীল সমাধানের দিকে নিয়ে যায়। প্রতিটি শিল্পে লিঙ্গ সাম্য উননয়নের প্রচার উদ্ভাবনের পরিবেশ গড়ে তোলার জন্য অপরিহার্য।"
+          >
+            Diverse perspectives drive innovation. When workplaces are
+            gender-balanced, they benefit from a broader range of ideas and
+            experiences, leading to better decision-making and more creative
+            solutions. Promoting gender equality in every industry is crucial
+            for fostering an environment where innovation thrives.
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="The Impact of Gender Equality"
+            data-lang-bn="লিঙ্গ সাম্যের প্রভাব"
+          >
+            The Impact of
+            Gender Equality
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Gender equality is not just a fundamental human right but a necessary foundation for a peaceful, prosperous, and sustainable world. By ensuring equal access to education, healthcare, and work, we empower individuals of all genders to participate fully in society, boosting economic productivity and the well-being of communities."
+            data-lang-bn="লিঙ্গ সাম্য শুধুমাত্র একটি মৌলিক মানবাধিকার নয়, বরং একটি শান্তিপূর্ণ, সমৃদ্ধ এবং টেকসই বিশ্বের জন্য অপরিহার্য ভিত্তি। শিক্ষা, স্বাস্থ্যসেবা এবং কর্মসংস্থানে সমান অধিকার নিশ্চিত করে, আমরা সমাজের সকল লিঙ্গের ব্যক্তিদের সম্পূর্ণভাবে অংশগ্রহণে সক্ষম করি, যা অর্থনৈতিক উৎপাদনশীলতা এবং সম্প্রদায়ের কল্যাণ বৃদ্ধি করে।"
+          >
+            Gender equality is not just a fundamental human right but a
+            necessary foundation for a peaceful, prosperous, and sustainable
+            world. By ensuring equal access to education, healthcare, and work,
+            we empower individuals of all genders to participate fully in
+            society, boosting economic productivity and the well-being of
+            communities.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class="lang-text"
+            data-lang-en="Gender equality is not just a fundamental human right but a necessary foundation for a peaceful, prosperous, and sustainable world. By ensuring equal access to education, healthcare, and work, we empower individuals of all genders to participate fully in society, boosting economic productivity and the well-being of communities."
+            data-lang-bn="লিঙ্গ সাম্য শুধুমাত্র একটি মৌলিক মানবাধিকার নয়, বরং একটি শান্তিপূর্ণ, সমৃদ্ধ এবং টেকসই বিশ্বের জন্য অপরিহার্য ভিত্তি। শিক্ষা, স্বাস্থ্যসেবা এবং কর্মসংস্থানে সমান অধিকার নিশ্চিত করে, আমরা সমাজের সকল লিঙ্গচিত করে, আমরা সমাজের সকল লিঙ্গের ব্যক্তিদের সম্পূর্ণভাবে অংশগ্রহণে সক্ষম করি, যা অর্থনৈতিক উৎপাদনশীলতা এবং সম্প্রদায়ের কল্যাণ বৃদ্ধি করে।"
+          >
+            Gender equality is not just a fundamental human right but a
+            necessary foundation for a peaceful, prosperous, and sustainable
+            world. By ensuring equal access to education, healthcare, and work,
+            we empower individuals of all genders to participate fully in
+            society, boosting economic productivity and the well-being of
+            communities.
+          </p>
+        </div>
+      </div>
+
+
+      <h2 class=" date-header lang-text" data-lang-en="This Week" data-lang-bn="এই সপ্তাহ">
+        This Week
+    </h2>
+      <!-- Repeat for more notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="Leadership Without Limits"
+            data-lang-bn="সীমাহীন নেতৃত্ব"
+          >
+            Leadership Without Limits
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Empowering women to take on leadership roles across all sectors has shown significant benefits, including more inclusive decision-making and increased organizational effectiveness. Encouraging female leadership is not just about equality; it's about leveraging diverse talents for better outcomes."
+            data-lang-bn="সকল খাতে নারীদের নেতৃত্বের ভূমিকা গ্রহণে উৎসাহিত করা গুরুত্বপূর্ণ সুফল দেখিয়েছে, যার মধ্যে রয়েছে আরও সমাবেশী সিদ্ধান্ত গ্রহণ এবং সংগঠনের কার্যকারিতা বৃদ্ধি। নারী নেতৃত্ব উৎসাহিত করা শুধু সমতা নিয়ে নয়, এটি বিভিন্ন প্রতিভার সদ্ব্যবহার করে ভালো ফলাফল অর্জনের বিষয়।"
+          >
+            Empowering women to take on leadership roles across all sectors has
+            shown significant benefits, including more inclusive decision-making
+            and increased organizational effectiveness. Encouraging female
+            leadership is not just about equality; it's about leveraging diverse
+            talents for better outcomes.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class="lang-text"
+            data-lang-en="Empowering women to take on leadership roles across all sectors has shown significant benefits, including more inclusive decision-making and increased organizational effectiveness. Encouraging female leadership is not just about equality; it's about leveraging diverse talents for better outcomes."
+            data-lang-bn="সকল খাতে নারীদের নেতৃত্বের ভূমিকা গ্রহণে উৎসাহিত করা গুরুত্বপূর্ণ সুফল দেখিয়েছে, যার মধ্যে রয়েছে আরও সমাবেশী সিদ্ধান্ত গ্রহণ এবং সংগঠনের কার্যকারিতা বৃদ্ধি। নারী নেতৃত্ব উৎসাহিত করা শুধু সমতা নিয়ে নয়, এটি বিভিন্ন প্রতিভার সদ্ব্যবহার করে ভালো ফলাফল অর্জনের বিষয়।"
+          >
+            Empowering women to take on leadership roles across all sectors has
+            shown significant benefits, including more inclusive decision-making
+            and increased organizational effectiveness. Encouraging female
+            leadership is not just about equality; it's about leveraging diverse
+            talents for better outcomes.
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="Bridging the Gender Gap in STEM Fields"
+            data-lang-bn="এসটিইএম ক্ষেত্রে লিঙ্গ বৈষম্য দূরীকরণ"
+          >
+            Bridging the Gender
+            Gap in STEM Fields
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Despite progress, women remain underrepresented in science, technology, engineering, and mathematics (STEM) fields. Addressing this gap is crucial for innovation and development, as diverse teams are known to produce more comprehensive and creative solutions to complex problems."
+            data-lang-bn="অগ্রগতি সত্ত্বেও, বিজ্ঞান, প্রযুক্তি, প্রকৌশল এবং গণিত (এসটিইএম) ক্ষেত্রে নারীরা এখনও অপ্রতিনিধিত্বশীল। এই বৈষম্য দূরীকরণ উদ্ভাবন ও উন্নয়নের জন্য অপরিহার্য, কারণ বৈচিত্র্যময় দলগুলি জটিল সমস্যাগুলির জন্য আরও সম্পূর্ণ এবং সৃজনশীল সমাধান তৈরি করতে পরিচিত।"
+          >
+            Despite progress, women remain underrepresented in science,
+            technology, engineering, and mathematics (STEM) fields. Addressing
+            this gap is crucial for innovation and development, as diverse teams
+            are known to produce more comprehensive and creative solutions to
+            complex problems.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class="lang-text"
+            data-lang-en="Despite progress, women remain underrepresented in science, technology, engineering, and mathematics (STEM) fields. Addressing this gap is crucial for innovation and development, as diverse teams are known to produce more comprehensive and creative solutions to complex problems."
+            data-lang-bn="অগ্রগতি সত্ত্বেও, বিজ্ঞান, প্রযুক্তি, প্রকৌশল এবং গণিত (এসটিইএম) ক্ষেত্রে নারীরা এখনও অপ্রতিনিধিত্বশীল। এই বৈষম্য দূরীকরণ উদ্ভাবন ও উন্নয়নের জন্য অপরিহার্য, কারণ বৈচিত্র্যময় দলগুলি জটিল সমস্যাগুলির জন্য আরও সম্পূর্ণ এবং সৃজনশীল সমাধান তৈরি করতে পরিচিত।"
+          >
+            Despite progress, women remain underrepresented in science,
+            technology, engineering, and mathematics (STEM) fields. Addressing
+            this gap is crucial for innovation and development, as diverse teams
+            are known to produce more comprehensive and creative solutions to
+            complex problems.
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more notifications -->
+      <div class="notification" onclick="showFullMessage(this)">
+        <div class="notification-content">
+          <h3
+            class="lang-text"
+            data-lang-en="Gender Equality as a Growth Strategy"
+            data-lang-bn="লিঙ্গ সাম্য হিসাবে বৃদ্ধির কৌশল"
+          >
+            Gender Equality as
+            a Growth Strategy
+          </h3>
+          <p
+            class="notification-text lang-text"
+            data-lang-en="Gender equality is a powerful catalyst for economic growth. By providing equal opportunities for education and employment, societies can harness the full potential of their populations, leading to increased productivity, improved economic outcomes, and reduced poverty rates."
+            data-lang-bn="লিঙ্গ সাম্য অর্থনৈতিক বৃদ্ধির জন্য একটি শক্তিশালী উদ্দীপক। শিক্ষা ও কর্মসংস্থানে সমান সুযোগ প্রদান করে, সমাজগুলি তাদের জনসংখ্যার পূর্ণ সম্ভাবনা হারনেস করতে পারে, যা উৎপাদনশীলতা বৃদ্ধি, অর্থনৈতিক ফলাফল উন্নত এবং দারিদ্র্যের হার হ্রাস করে।"
+          >
+            Gender equality is a powerful catalyst for economic growth. By
+            providing equal opportunities for education and employment,
+            societies can harness the full potential of their populations,
+            leading to increased productivity, improved economic outcomes, and
+            reduced poverty rates.
+          </p>
+        </div>
+        <div class="full-message" style="display: none">
+          <span class="close-icon">&times;</span>
+          <p
+            class=" lang-text"
+            data-lang-en="Gender equality is a powerful catalyst for economic growth. By providing equal opportunities for education and employment, societies can harness the full potential of their populations, leading to increased productivity, improved economic outcomes, and reduced poverty rates."
+            data-lang-bn="লিঙ্গ সাম্য অর্থনৈতিক বৃদ্ধির জন্য একটি শক্তিশালী উদ্দীপক। শিক্ষা ও কর্মসংস্থানে সমান সুযোগ প্রদান করে, সমাজগুলি তাদের জনসংখ্যার পূর্ণ সম্ভাবনা হারনেস করতে পারে, যা উৎপাদনশীলতা বৃদ্ধি, অর্থনৈতিক ফলাফল উন্নত এবং দারিদ্র্যের হার হ্রাস করে।"
+          >
+            Gender equality is a powerful catalyst for economic growth. By
+            providing equal opportunities for education and employment,
+            societies can harness the full potential of their populations,
+            leading to increased productivity, improved economic outcomes, and
+            reduced poverty rates.
+          </p>
+        </div>
+      </div>
+      <!-- Repeat for more notifications -->
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/85fcd39f72.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="notification.js"></script>
+  </body>
+</html>
